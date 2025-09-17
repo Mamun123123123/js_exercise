@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <form id="form" class="bg-gray-400 text-center m-45 p-5">
+    <h2 class="font-serif p-2 m-4 font-bold shadow-md">Contact us</h2>
+     <label for="name" class="p-2 m-3 text-white  shadow-md">Enter your name</label><br>
+     <input type="text" id="name" placeholder="Enter your name" class="m-4 p-2 animate-pulse text-center shadow-sm bg-slate-400" required><br>
+     <span id="nameerror" class="error"></span>
+     <label for="email"  class="p-2 m-3 text-white  shadow-md">Enter your Email</label><br> 
+     <input type="email" id="email" placeholder="Enter your email" class="m-4 p-2 animate-pulse text-center shadow-sm bg-slate-400" required><br>
+     <span id="emailerror" class="error"></span>
+     <label for="subject"  class="p-2 m-3 text-white  shadow-md">Subject</label> <br>
+     <input type="text" name="subject" id="subject" placeholder="Subject"class="m-4 p-2 animate-pulse text-center shadow-sm bg-slate-400" required><br>
+     <label for="msg"  class="p-2 m-3 text-white  shadow-md">Message: </label><br>
+     <textarea name="msg" id="msg" placeholder="Enter your Massege Here...." rows="5"class="border-2 m-4 " required></textarea><br>
+     <span id="msgerror" class="error"></span>
+     <button type="submit" class="p-4  bg-green-100 w-30 hover:bg-orange-500">Submit</button>
+     <p id="success"></p>
+    </form>
+
+
+    <script>
+        const form = document.getElementById("form")
+        form.addEventListener("submit",()=>{
+            const name = form.elements["name"].value
+            const email = form.elements["email"].value
+            const subject = form.elements["subject"].value
+            const msg = form.elements["msg"].value
+            
+
+            const nameerror = document.getElementById("nameerror")
+            const emailerror = document.getElementById("emailerror")
+
+            const msgerror = document.getElementById("msgerror")
+            const output = document.getElementById("success")
+            
+                     event.preventDefault()
+            
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-300 ">
+    <section class="bg">
+        <form id="form" class="bg-gray-600 shadow-lg text-center sm:m-20 sm:m-50">
+            <h1 class="font-bold text-left sm:text-center sm:p-4 shadow-lg text-yellow-200 animate-pulse sm:text-2xl lg:w-200 sm:m-4">Login Form</h1>
+            <label for="name" class="font-serif  text-blue-400 shadow-lg  text-2xl">Enter your name</label><br>
+            <input type="text" name="name" id="name" placeholder="Enter your name here" class="p-2 m-4 text-white  bg-green-700 font-serif text-lg text-center  shadow-lg animate-pulse" required><br>
+            <label for="email" class="font-serif  text-blue-400 shadow-lg  text-2xl">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter your Email" class="p-2 m-4 text-white bg-green-700 font-serif text-lg text-center  shadow-lg animate-pulse" required><br>
+             <label for="email" class="font-serif  text-blue-400 shadow-lg  text-2xl">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" class="p-2 m-4 text-white bg-green-700 font-serif text-lg text-center  shadow-lg animate-pulse" required minlength="6"><br>
+            <button type="submit" class="p-2 font-mono shadow-lg m-4 w-40 animate-pulse bg-neutral-300">Click Here</button><br>
+        </form>
+    </section>
+    <script>
+         //Access form element.........
+         const form = document.getElementById('form')
+         console.log(form)
+         
+
+         // add event handlers to the form
+
+         form.addEventListener("submit",(event) =>{ //form ar khetre alwys event lekha ta  hobe 
+                  //form validation
+                  const name = form.elements['name'].value
+                 const email = form.elements['email'].value
+                 const password = form.elements['password'].value
+                  if(!name || !email || !password){
+                    alert("Please fill out all the fields correctly");
+                    event.preventDefault();  // kaj holo page reload hobe na
+                  }else{
+                    alert("Registration Successfull...")
+                  }
+         })
+
+
+
+    </script>
+</body>
+</html>
