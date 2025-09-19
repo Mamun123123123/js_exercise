@@ -1,0 +1,11 @@
+{
+    "name":"Mamun",
+    "age":25,
+    "isStudent": true,
+    "hobbies":["Reading","Travelling"],
+    "address":{
+        "City":"Dhaka",
+        "code":333
+    }
+
+}

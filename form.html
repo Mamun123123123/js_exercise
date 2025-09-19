@@ -29,18 +29,31 @@
 
          form.addEventListener("submit",(event) =>{ //form ar khetre alwys event lekha ta  hobe 
                   //form validation
-                  const name = form.elements['name'].value
-                 const email = form.elements['email'].value
-                 const password = form.elements['password'].value
-                  if(!name || !email || !password){
-                    alert("Please fill out all the fields correctly");
-                    event.preventDefault();  // kaj holo page reload hobe na
-                  }else{
-                    alert("Registration Successfull...")
-                  }
+                //   const name = form.elements['name'].value
+                //  const email = form.elements['email'].value
+                //  const password = form.elements['password'].value
+                //   if(!name || !email || !password){
+                //     alert("Please fill out all the fields correctly");
+                //     event.preventDefault();  // kaj holo page reload hobe na
+                //   }else{
+                //     alert("Registration Successfull...")
+                //   }
+                event.preventDefault()
+                let data = {
+                  name:form.elements['name'].value,
+                  email:form.elements['email'].value,
+                  password:form.elements['password'].value
+
+                }
+                let jsonData = JSON.stringify(data)
+                console.log(jsonData)
+                localStorage.setItem("contactInfo",jsonData)
+                alert("saved")
+                let savedata = localStorage.getItem("contactInfo")
+                console.log(savedata)
          })
 
-
+    
 
     </script>
 </body>

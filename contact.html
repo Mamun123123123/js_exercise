@@ -34,14 +34,13 @@
             const subject = form.elements["subject"].value
             const msg = form.elements["msg"].value
             
-
-            const nameerror = document.getElementById("nameerror")
-            const emailerror = document.getElementById("emailerror")
-
-            const msgerror = document.getElementById("msgerror")
-            const output = document.getElementById("success")
-            
                      event.preventDefault()
+
+             if(msg === subject){
+                alert("please cng ")
+             }else{
+                alert("successfull...")
+             }        
             
         })
     </script>

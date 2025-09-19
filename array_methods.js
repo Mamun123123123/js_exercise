@@ -52,5 +52,6 @@
 // //arr.splice(2,0,"Hi")
 // console.log(arr.slice(1,4))
 
-let sum = (x,y) => x+y 
-console.log(sum(2,3))
+// let sum = (x,y) => x+y 
+// console.log(sum(2,3))
+
