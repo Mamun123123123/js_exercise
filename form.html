@@ -50,8 +50,12 @@
                 localStorage.setItem("contactInfo",jsonData)
                 alert("saved")
                 let savedata = localStorage.getItem("contactInfo")
-                console.log(savedata)
+                if(savedata){
+                    const parsedata =JSON.parse(savedata)
+                }
+               // document.addEventListener("DOMContentLoaded",savedata)
          })
+         
 
     
 
