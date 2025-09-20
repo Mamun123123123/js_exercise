@@ -46,10 +46,15 @@ const ob = {
         name: "mamun",
         age: 23,
         city: "Dhaka",
-        fd: function() {
-            console.log(`My name is: ${this.name}`) 
-        },
+        code:349883948
     
 };
 
-ob.fd()
+for(let o in ob) console.log(o + ":  " + ob[o])
+
+delete ob.name   
+for(let o in ob) console.log(o + ":  " + ob[o])
+
+Object.assign(ob,{name:"Mamun"})
+for(let o in ob) console.log(o + ":  " + ob[o])
+
